@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Uh Oh! Something Went Wrong</title>
+<link rel="icon" type="image/png" href="./images/mushroom.png">
+<link rel="stylesheet" href="./styles/404.css" />
+
+</head>
+
+<body>
+	<audio id="booSound">
+		<source src="./images/boo.mp3">
+	</audio>
+	<div class="background-container">
+
+		<div id="container">
+			<div id="image-container">
+				<img class="boo" onmouseover="document.getElementById('booSound').play()" src="./images/boo.png"></div>
+
+			<div class="word-container">
+				<h1>404</h1>
+				<h2>Something Went Wrong</h2>
+			</div>
+
+		</div>
+		<!-- container end-->
+
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="./scripts/jquery-ui.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$('.boo').mouseenter(function() {
+				$(this).effect('bounce', {
+					times : 3
+				}, 2000);
+			});
+		});
+	</script>
+
+</body>
+
+</html>
+
+

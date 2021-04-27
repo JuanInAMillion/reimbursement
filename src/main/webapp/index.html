@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Expense Reimbursement App</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="./styles/index.css"></link>
+</head>
+
+<body>
+	<div id="pageContainer">
+		<div id="messageContainer">
+			<h1>Welcome, Please Login To Your Employee Portal</h1>
+			<h2>New York City Inc.</h2>
+		</div>
+		<div id="formContainer">
+			<form id="form" action="app/login" method="post" class="container">
+				<!--<label for="uname"><b>Username</b></label>-->
+				<input type="text" placeholder="Enter Username" name="username" id="username" required>
+				<!--<label for="psw"><b>Password</b></label>-->
+				<input type="password" placeholder="Enter Password" name="password" id="password" required>
+				<button type="submit" name="submit" id="submit" class="btn">Login</button>
+			</form>
+		</div>
+	</div>
+	<script src="./scripts/index.js"></script>
+</body>
+
+</html>

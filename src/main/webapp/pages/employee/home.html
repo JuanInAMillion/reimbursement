@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Expense Reimbursement App</title>
+        <meta charset="UTF-8"/>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="/reimbursement/styles/style.css"> 
+</head>
+
+<body>
+	<div class="navbar">
+	 <h2>Employee Portal</h2>
+	  <div class="dropdown">
+	    <button class="dropbtn">Reimbursement 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/employee/newRequest.html">New Request</a>
+	      <a href="/reimbursement/pages/employee/home.html">Request Info</a>
+	    </div>
+	  </div> 
+	  <a href="/reimbursement/app/employee/profile">Edit Profile</a> 
+	  <a href="/reimbursement/app/logout">Logout</a>
+	</div>
+
+	<header>
+	  <div class="bg-img">
+		<div class="container">
+		<table id="reimbTable">
+			<thead id = "reimbThead">
+				<tr >
+					<td>Request_ID  	</td>
+					<td>Location    	</td>
+					<td>Cost        	</td>
+					<td>Request_Date	</td>
+					<td>Approved_Date	</td>
+					<td>Description 	</td>
+					<td>Receipt_image	</td>
+					<td>Status      	</td>
+					<td>      			</td>
+				</tr>
+			</thead>
+			<tbody id="reimbTbody">
+			</tbody>
+		</table>
+		<br></br>
+		
+		<form action="/reimbursement/app/employee/reimbRequest" name="form_req_find" method="get"> 
+				<div style="display:inline-block; width:25%;text-align:right;"> 
+				  	<select id="optionid" name="optionid" >
+				    	<option value="1" selected>All</option>
+				    	<option value="2">Pending</option>
+				    	<option value="3">Approved</option>
+				    	<option value="4">Denied</option>
+				  	</select>			
+				</div>		    		  		
+		  	    <div style="display:inline-block;width:20%; text-align:right;">
+			    	<button type="submit" name="submit" id="submit" class="btn">Search</button>
+		        </div>		    
+		</form>		
+		
+		</div>
+	  </div>
+	</header>
+	
+	<script src = "/reimbursement/scripts/ReimbRequestsFromJson.js"></script>
+</body>
+</html>	

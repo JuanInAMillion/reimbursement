@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Expense Reimbursement App</title>
+	<meta charset="UTF-8"/>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="/reimbursement/styles/style.css"> 
+	
+	<style>
+	.container {
+	 	width: 600px;
+	}
+	button{
+		position:center;
+		width:30%;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="navbar">
+	 <h2>Manager Portal</h2>
+	  <div class="dropdown">
+	    <button class="dropbtn">Reimbursement 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/manager/newRequest.html">New Request</a>
+	      <a href="/reimbursement/pages/manager/home.html">Request Info</a>
+	    </div>
+	  </div> 
+	  <div class="dropdown">
+	    <button class="dropbtn">Management 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/manager/register.html">Register</a>
+	      <a href="/reimbursement/app/manager/employeeManagement?optionid=1">Employee Info</a>
+	    </div>
+	  </div> 
+	  <a href="/reimbursement/app/manager/profile">Edit Profile</a> 
+	  <a href="/reimbursement/app/logout">Logout</a>
+	</div>
+
+	<header>
+		<div class="bg-img">
+	  	<form action="/reimbursement/app/manager/register" method="post" class="container">
+	    	<label for="uname"><b>Username:</b></label>
+	    	<input type="text" placeholder="username" name="username" id="username" required>
+	    	<label for="psw"><b>Password</b></label>
+	    	<input type="password" placeholder="password" name="password" id="password" required>
+	    	<label for="first"><b>First Name</b></label>
+	    	<input type="text" placeholder="first name" name="firstname" id ="firstname" required>
+	    	<label for="lastname"><b>Last Name</b></label>
+	    	<input type="text" placeholder="last name" name="lastname" id="lastname" required>
+	    	<label for="email"><b>Email</b></label>
+	    	<input type="text" placeholder="your@email.com" name="email" id ="email" required>		
+			<label for="wyears">Years Worked</label>
+			<input type="number" id="workyears" name="workyears" min="0" max="100">		
+			<div style="width:40%; text-align:center;">		    					
+	    	<button type="submit" name="submit" id="submit"  class="btn">Register</button>
+	  		</div>
+	  	</form>
+		</div>			  	
+	</header>
+	
+	<!-- 
+	<script src = "/reimbursement/scripts/register.js"></script>
+	 -->
+</body>
+</html>	

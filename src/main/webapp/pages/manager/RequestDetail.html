@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Expense Reimbursement App</title>
+	<meta charset="UTF-8"/>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="/reimbursement/styles/style.css"> 
+	
+<style>
+
+.container {
+	 	width: 600px;
+	}
+</style>	
+</head>
+
+<body>
+	<div class="navbar">
+	<h2>Manager Portal</h2>
+	  <div class="dropdown">
+	    <button class="dropbtn">Reimbursement 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/manager/newRequest.html">New Request</a>
+	      <a href="/reimbursement/pages/manager/home.html">Request Info</a>
+	    </div>
+	  </div> 
+	  <div class="dropdown">
+	    <button class="dropbtn">Management 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/manager/register.html">Register</a>
+	      <a href="/reimbursement/app/manager/employeeManagement?optionid=1">Employee Info</a>
+	    </div>
+	  </div> 
+	  <a href="/reimbursement/app/manager/profile">Edit Profile</a> 
+	  <a href="/reimbursement/app/logout">Logout</a>
+	</div>
+
+	<header>
+		<div class="bg-img">
+			<div>
+			<h2 style ="color:white;">Reimbursement System<small style ="color:white;">--request detail</small></h2>
+			</div>
+		  	<div class="container">
+		  		<table>
+		  			<tr>	  			
+		  				<td><b>Request Id:</b></td>
+		  				<td id="reimbReqId"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Employee Id:</b></td>
+		  				<td id="employeeId"></td>
+		  			</tr>
+		  			<tr>  			
+		  				<td><b>Location:</b></td>
+		  				<td id="location"></td>
+		  			</tr>
+		  			<tr>	  			
+		  				<td><b>Cost:</b></td>
+		  				<td id="cost"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Description:</b></td>
+		  				<td id="description"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Request Date:</b></td>
+		  				<td id="requestDate"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Approved Date:</b></td>
+		  				<td id="approvalDate"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Request Status:</b></td>
+		  				<td id="statusId"></td>
+		  			</tr>
+		  		</table>
+			 
+			    <label><b>Receipt Image:</b></label>
+        		<img src = "receipt" id="receipt" alt="RGB Image" height="210" width="350"> 
+        	
+				<form action="/reimbursement/app/manager/optionOnRequest" name="form_req_option" id="form_req_option" method="post"> 									
+						<input type="hidden" style="display:none;" name="reqid" id="reqid"/>
+						<div style="display:inline-block; width:25%;text-align:right;"> 
+						  	<select id="optionid" name="optionid" >
+						    	<option value="1" selected>Option</option>
+						    	<option value="2">Approval</option>
+						    	<option value="3">Deny</option>
+						  	</select>			
+						</div>
+				  	    <div style="display:inline-block;width:20%; text-align:right;">
+					    	<button type="submit" name="submit" id="submit" class="btn">Confirm</button>
+				        </div>		    
+				</form>		        		  
+		  	</div>
+	  </div>	
+	</header>
+	
+	<script src = "/reimbursement/scripts/RequestsDetailFromManager.js"></script>
+
+</body>
+</html>	
