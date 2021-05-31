@@ -1,0 +1,55 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+#pageContainer{
+  display: flex;
+  flex-direction: row;
+  column-gap: 7em;
+  justify-content: center;
+  margin-top: 13em;
+}
+
+#messageContainer{
+  width: 30em;
+  height: 10em;
+  text-align: center;
+}
+
+h1 { 
+  color: gray;
+}
+
+h2{
+  color: #466995;
+}
+
+#formContainer{
+  text-align: center;
+}
+
+#form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+  border-style: groove;
+  border-width: 0.5px;
+  padding: 3em;
+  background-color: white;
+}
+
+input, button{
+  border-radius: 0.5em;
+  width: 20em;
+  height: 3em;
+  margin-top: 1em;
+}
+
+button{
+  background-color: #466995;
+  color: white;
+  width: 100%;
+}
+
+
+

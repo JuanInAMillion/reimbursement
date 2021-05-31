@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Expense Reimbursement App</title>
+	<meta charset="UTF-8"/>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="/reimbursement/styles/style.css"> 
+	
+<style>
+/* Add styles to the form container */
+.container {
+  width: 600px;
+}
+</style>	
+</head>
+
+<body>
+	<div class="navbar">
+	<h2>Manager Portal</h2>
+	  <div class="dropdown">
+	    <button class="dropbtn">Reimbursement 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/manager/newRequest.html">New Request</a>
+	      <a href="/reimbursement/pages/manager/home.html">Request Info</a>
+	    </div>
+	  </div> 
+	  <div class="dropdown">
+	    <button class="dropbtn">Management 
+	      <i class="fa fa-caret-down"></i>
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="/reimbursement/pages/manager/register.html">Register</a>
+	      <a href="/reimbursement/app/manager/employeeManagement?optionid=1">Employee Info</a>
+	    </div>
+	  </div> 
+	  <a href="/reimbursement/app/manager/profile">Edit Profile</a> 
+	  <a href="/reimbursement/app/logout">Logout</a>
+	</div>
+
+	<!-- Header -->
+	<header>
+		<div class="bg-img">
+			<div>
+			</div>
+		  	<div class="container">
+		  		<table>
+		  			<tr>	  			
+		  				<td><b>Employee Id:</b></td>
+		  				<td id="employeeId_e"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Username:</b></td>
+		  				<td id="username_e"></td>
+		  			</tr>
+		  			<tr>  			
+		  				<td><b>First Name:</b></td>
+		  				<td id="firstname_e"></td>
+		  			</tr>
+		  			<tr>	  			
+		  				<td><b>Last Name:</b></td>
+		  				<td id="lastname_e"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Email:</b></td>
+		  				<td id="email_e"></td>
+		  			</tr>
+		  			<tr>
+		  				<td><b>Years Worked:</b></td>
+		  				<td id="workyears_e"></td>
+		  			</tr>
+		  		</table>
+		  	</div>
+	  </div>	
+	</header>
+	
+	<script src = "/reimbursement/scripts/employeeInfo.js"></script>
+
+</body>
+</html>	
